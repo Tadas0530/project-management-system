@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-flex">
+    <div class="row">
+      <div class="col-12">
+        <base-header></base-header>
+      </div>
+    </div>
+    <base-sidebar></base-sidebar>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BaseHeader from "./components/layout/header/BaseHeader.vue";
+import BaseSidebar from "./components/layout/sidebar/BaseSidebar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    BaseHeader,
+    BaseSidebar,
+  },
+};
 </script>
 
 <style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  width: 100vw;
+}
+* {
+  box-sizing: border-box;
 }
 </style>
